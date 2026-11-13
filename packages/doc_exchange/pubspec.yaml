@@ -1,0 +1,20 @@
+name: doc_exchange
+description: Austausch von Textly-Dokumenten mit PowerPoint (PPTX); später DOCX. Reines Dart.
+publish_to: none
+version: 0.1.0
+resolution: workspace
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  doc_model:
+    path: ../doc_model
+  archive: ^4.0.0
+  xml: ^6.5.0
+  # image ab 4.11 braucht archive >= 4.1, pdf 3.12 erlaubt nur archive < 4.1 (Build-Fehler «decodeLazy»)
+  image: ">=4.10.1 <4.11.0"
+
+dev_dependencies:
+  test: ^1.30.0
+  lints: ^6.0.0

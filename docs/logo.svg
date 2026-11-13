@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256">
+  <!-- Textly App-Icon «T mit Punkt» (Vorlage für tool/make_icon.py) -->
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#3E78F5"/>
+      <stop offset="1" stop-color="#1F4CC4"/>
+    </linearGradient>
+  </defs>
+  <rect x="16" y="16" width="224" height="224" rx="52" fill="url(#g)"/>
+  <path d="M66 64h124v34h-44v104h-36V98H66z" fill="#fff"/>
+  <circle cx="178" cy="186" r="17" fill="#FFB547"/>
+</svg>

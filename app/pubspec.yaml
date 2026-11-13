@@ -1,0 +1,114 @@
+name: textly
+description: "Textly – visueller Dokumenteneditor."
+publish_to: 'none'
+version: 0.1.0+1
+resolution: workspace
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  doc_model:
+    path: ../packages/doc_model
+  doc_render:
+    path: ../packages/doc_render
+  doc_exchange:
+    path: ../packages/doc_exchange
+  printing: ^5.14.3
+  path_provider: ^2.1.5
+  win32: ^5.15.0
+  ffi: ^2.1.4
+  # image ab 4.11 braucht archive >= 4.1, pdf 3.12 erlaubt nur archive < 4.1 (Build-Fehler «decodeLazy»)
+  image: ">=4.10.1 <4.11.0"
+  file_selector: ^1.1.0
+  desktop_drop: ^0.5.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  archive: ^4.0.0 # Word-Testdateien bauen (gleiche Version wie doc_exchange)
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/fonts/
+    - assets/spell/
+    - assets/branding/textly_icon_256.png
+  # Vorläufige Schriften: Roboto und Roboto Condensed (Apache 2.0) aus dem Flutter-SDK.
+  # Werden durch die gewählten OFL-Schriften ersetzt.
+  fonts:
+    - family: TextlySans
+      fonts:
+        - asset: assets/fonts/Sans-Regular.ttf
+        - asset: assets/fonts/Sans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Sans-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Sans-BoldItalic.ttf
+          weight: 700
+          style: italic
+    - family: TextlyCondensed
+      fonts:
+        - asset: assets/fonts/Cond-Regular.ttf
+        - asset: assets/fonts/Cond-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Cond-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Cond-BoldItalic.ttf
+          weight: 700
+          style: italic
+    - family: TextlyMontserrat
+      fonts:
+        - asset: assets/fonts/Montserrat-Regular.ttf
+        - asset: assets/fonts/Montserrat-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Montserrat-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Montserrat-BoldItalic.ttf
+          weight: 700
+          style: italic
+    - family: TextlyNunito
+      fonts:
+        - asset: assets/fonts/Nunito-Regular.ttf
+        - asset: assets/fonts/Nunito-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Nunito-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Nunito-BoldItalic.ttf
+          weight: 700
+          style: italic
+    - family: TextlyLora
+      fonts:
+        - asset: assets/fonts/Lora-Regular.ttf
+        - asset: assets/fonts/Lora-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Lora-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Lora-BoldItalic.ttf
+          weight: 700
+          style: italic
+    - family: TextlyPlayfair
+      fonts:
+        - asset: assets/fonts/Playfair-Regular.ttf
+        - asset: assets/fonts/Playfair-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Playfair-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Playfair-BoldItalic.ttf
+          weight: 700
+          style: italic
+    - family: TextlyCaveat
+      # ohne Kursivschnitt: aufrecht (wie im PDF)
+      fonts:
+        - asset: assets/fonts/Caveat-Regular.ttf
+        - asset: assets/fonts/Caveat-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Caveat-Regular.ttf
+          style: italic
+        - asset: assets/fonts/Caveat-Bold.ttf
+          weight: 700
+          style: italic

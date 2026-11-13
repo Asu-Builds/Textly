@@ -1,0 +1,13 @@
+# Dart-Workspace: gemeinsame Abhängigkeitsauflösung für App und Pakete.
+# Der Machbarkeitstest in spike/ gehört bewusst nicht dazu.
+name: textly_workspace
+publish_to: none
+
+environment:
+  sdk: ^3.11.4
+
+workspace:
+  - packages/doc_model
+  - packages/doc_render
+  - packages/doc_exchange
+  - app

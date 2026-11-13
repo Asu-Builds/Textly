@@ -1,0 +1,22 @@
+name: doc_render
+description: Seitendarstellung und PDF-Export von Textly. Bildschirm und PDF nutzen denselben Textsatz.
+publish_to: none
+version: 0.1.0
+resolution: workspace
+
+environment:
+  sdk: ^3.11.4
+  flutter: ">=3.41.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  doc_model:
+    path: ../doc_model
+  pdf: ^3.12.0
+  vector_math: ^2.1.4 # Drehmatrix für gedrehte Bilder im PDF
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0

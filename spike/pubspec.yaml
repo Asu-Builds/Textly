@@ -1,0 +1,51 @@
+name: textly_spike
+description: "Machbarkeitstest für den visuellen Dokumenteneditor: PDF-Treue, Textbearbeitung, Rechtschreibprüfung."
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  pdf: ^3.12.0
+  printing: ^5.14.2
+  path_provider: ^2.1.5
+  win32: ^5.15.0
+  ffi: ^2.1.4
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/images/
+    - assets/fonts/
+    - assets/spell/
+  # Testschriften: Roboto und Roboto Condensed (Apache 2.0) aus dem Flutter-SDK.
+  # Für den MVP durch die gewählten OFL-Schriften ersetzen.
+  fonts:
+    - family: TextlySans
+      fonts:
+        - asset: assets/fonts/Sans-Regular.ttf
+        - asset: assets/fonts/Sans-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Sans-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Sans-BoldItalic.ttf
+          weight: 700
+          style: italic
+    - family: TextlyCondensed
+      fonts:
+        - asset: assets/fonts/Cond-Regular.ttf
+        - asset: assets/fonts/Cond-Bold.ttf
+          weight: 700
+        - asset: assets/fonts/Cond-Italic.ttf
+          style: italic
+        - asset: assets/fonts/Cond-BoldItalic.ttf
+          weight: 700
+          style: italic
